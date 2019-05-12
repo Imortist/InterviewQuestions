@@ -19,10 +19,5 @@ public class FindMissingLowestPositiveIntegerTest {
         int[] nums = {1, 2, 0};
         assertEquals(3, diq.findLowestPositiveInteger(nums));
     }
-
-    @Test
-    public void returns0(){
-        int[] nums = {1,2,3};
-        assertEquals(0, diq.findLowestPositiveInteger(nums));
-    }
 }
+
