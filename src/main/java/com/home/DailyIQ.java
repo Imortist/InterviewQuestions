@@ -1,6 +1,7 @@
 package com.home;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 class DailyIQ {
 
@@ -35,15 +36,13 @@ class DailyIQ {
     }
 
     int findLowestPositiveInteger(int[] nums) {
-        int lowestInt = nums[0];
-
-        for (int i : nums) {
-            if (i < lowestInt && i >= 0) lowestInt = i;
+        int minInt = 1;
+        List<Integer> intList = new ArrayList<>();
+        for(int i : nums){
+            intList.add(i);
         }
-        do{
-            lowestInt++;
-        } while(Arrays.asList(nums).contains(lowestInt));
-        return lowestInt;
+        while(intList.contains(minInt)) minInt++;
+        return minInt;
     }
 }
 
